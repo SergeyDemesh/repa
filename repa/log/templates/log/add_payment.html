@@ -1,0 +1,17 @@
+<div class="add_form">
+    <form action="{% url 'log:add_payment' student.id%}" method="post">
+        {% csrf_token %}
+        <button class="close" onclick="close_form()">Закрыть</button>
+        <fieldset>
+            <div class="field">
+                <label for="amount">Сумма</label>
+                <input type="number" name="amount" id="amount">
+            </div>
+            <div class="field">
+                <label for="date">Дата платежа</label>
+                <input type="date" name="date" id="date">
+            </div>
+        </fieldset>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>

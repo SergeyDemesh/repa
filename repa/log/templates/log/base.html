@@ -1,0 +1,8 @@
+{% load static %}
+<script src="{% static 'log/script.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'log/style.css' %}">
+{% include "log/header.html" %}
+
+{% block content %}{% endblock %}
+
+{% include "log/footer.html" %}

@@ -1,0 +1,31 @@
+{% extends "log/base.html" %}
+
+{% block content %}
+<table class="students">
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Баланс</th>
+        <th>Стоимость занятия</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for student in students_list %}
+    <tr class="student">
+        <td><a href="{% url 'log:student' student.id %}">{{ student.last_name }} {{student.first_name}}</a></td>
+        <td>{{ student.balance }}</td>
+        <td>{{ student.class_cost }}</td>
+        
+    </tr>
+    {% endfor %}
+    <tr>
+        <td>Итого вроде как должны</td>
+        <td>{{ sum }}</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<div class="side-bar">
+    
+</div>
+{% endblock %}

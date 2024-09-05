@@ -1,0 +1,19 @@
+<div class="log">
+    {% csrf_token %}
+    <ul class="log-list">
+        {% for lesson in student.lesson_set.all %}
+        <li>
+            <div class="lesson">
+                <div class="lesson-date">{{ lesson.date|date:"d.m" }}</div>
+                <input type="checkbox" class="checkbox" value="{{ lesson.id }}" name="lesson" {% if lesson.state %}checked{% endif %} data-state="{{lesson.state}}">
+                <div class="lesson-amount">{{lesson.amount}}р.</div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="log-control">
+        <ul class="log-control-buttons">
+            <li><button class="save-button" onclick="save_changes()">Save</button></li>
+        </ul>
+    </div>
+</div>

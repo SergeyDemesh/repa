@@ -1,0 +1,21 @@
+<div class="add_form">
+    <form action="{% url 'log:add_lesson' student.id%}" method="post">
+        {% csrf_token %}
+        <button class="close" onclick="close_form()">Закрыть</button>
+        <fieldset>
+            <div class="field">
+                <label for="date">Дата занятия</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div class="field">
+                <label for="start_time">Начало</label>
+                <input type="time" name="start_time" id="start_time">
+            </div>
+            <div class="field">
+                <label for="end_time">Конец</label>
+                <input type="time" name="end_time" id="end_time">
+            </div>
+        </fieldset>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>

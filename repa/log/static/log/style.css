@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #080a1a;
+    color: #fff;
+    font-size: 24px;
+}
+
+.header {
+    width: 100%;
+}
+
+.header-nav {
+    width: 100%;
+}
+
+.header-nav-links {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-nav-links li a {
+    padding: 10px 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav-links li a:hover {
+    color: #aaa;;
+}
+
+ul.student {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+}
+
+table.students {
+    width: 70%;
+    background-color: #1f223a;
+    border-spacing: 0;
+}
+
+td {
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: #000104;
+    padding-left: 15px;
+}
+
+td:last-child {
+    width: 20%;
+}
+
+td ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+button#add_lesson_button, #add_payment_button {
+    background-color: #fff0;
+    color: #fff0;
+    border: none;
+    background-position: center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 100%;
+}
+
+.students tbody tr {
+    height: 30px;
+    height: 60px;
+    font-size: 26px;
+}   
+
+tr.student td a {
+    color: inherit;
+    text-decoration: none;
+}
+
+tr.student td a:hover {
+    color: #acacac;
+}
+
+.students tbody tr:nth-child(odd) {
+  background-color: #111429;
+}
+
+#add_payment_button {
+    background-image: url('images/topup.svg');
+}
+
+#add_lesson_button {
+    background-image: url('images/lesson.svg');
+}
+
+.info {
+    margin: 20px 25px;
+    padding: 15px;
+    background-color: #111429;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    border-radius: 15px;
+}
+
+ul.log-list {
+    display: flex;
+    max-width: 80%;
+    overflow-y: hidden;
+    overflow-x: overlay;
+    scrollbar-color: #fff #080A19;
+    scrollbar-width: thin;
+}
+
+ul.log-list li {
+    padding: 0 10px;
+}
+
+.lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 110px;
+    position: relative;
+}
+
+.lesson input.checkbox {
+    transform: scale(4);
+    cursor: pointer;
+}
+
+.lesson-amount {
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+button.save-button {
+    background-image: url('images/save.svg');
+    background-color: #ff980000;
+    border: none;
+    background-position: center 15%;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 8;
+    cursor: pointer;
+}
+
+button.save-button:hover {
+    background-color: #6600ffab;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-left {
+    width: 80%;
+}
+
+.content-menu {
+    padding: 15px 30px;
+    width: 15%;
+}
+
+.content-menu ul li {
+    height: 40px;
+    padding: 5px 0;
+}
+
+.add_form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_form form {
+    background-color: #1f223a;
+    margin: 0;
+    border-radius: 25px;
+    width: 40%;
+}
+
+.add_form form .close {
+    background-image: url(images/cross.svg);
+    background-color: #fff0;
+    color: #fff0;
+    background-position: center;
+    background-size: 38px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+}
+
+.add_form form .close:hover {
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+
+.add_form form fieldset {
+    border: none;
+    margin: 0;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.field input {
+    width: 60%;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #080a1a;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+input#date::-webkit-calendar-picker-indicator, input[type=time]::-webkit-calendar-picker-indicator {
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.add_form form input[type="submit"] {
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    background-color: #080a1a;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add_form form input[type="submit"]:hover {
+    background-color: #3341b1;
+}

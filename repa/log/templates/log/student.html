@@ -1,0 +1,20 @@
+{% extends "log/base.html" %}
+{% load static %}
+{% block content %}
+<div class="content" data-id="{{student.id}}" >
+    <div class="content-left">
+            <ul class="info">
+            <li>Имя: {{student.first_name}} {{ student.last_name }}</li>
+            <li>Баланс: {{ student.balance }}</li>
+            <li>Стоимость занятия: {{ student.class_cost }}</li>
+        </ul>
+        {% include "log/log.html" %}
+    </div>
+    <div class="content-menu">
+        <ul>
+            <li><button id="add_payment_button" onclick="show_payment_form()">Добавить платёж</button></li>
+            <li><button id="add_lesson_button" onclick="show_lesson_form()">Добавить занятие</button></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
